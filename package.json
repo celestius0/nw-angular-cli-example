@@ -42,6 +42,7 @@
   },
   "private": true,
   "dependencies": {
+    "angulartics2": "^8.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.8",

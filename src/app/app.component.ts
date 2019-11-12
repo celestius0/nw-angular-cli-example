@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,9 @@ export class AppComponent {
 
   public links: any;
 
-  constructor () {
+  constructor (
+    private angulartics2GoogleTagManager: Angulartics2GoogleTagManager,
+  ) {
     this.links = [
       {
         title: 'Angular Tutorial',
@@ -33,6 +36,8 @@ export class AppComponent {
         url: 'https://nwjs.io'
       }
     ];
+
+    this.angulartics2GoogleTagManager.startTracking();
   }
 
   public open (evt, link) {
